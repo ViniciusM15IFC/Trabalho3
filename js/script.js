@@ -17,21 +17,30 @@ function Redirecionar(name) {
 function Comprar(n) {
     var nome = nomes[n]
     var preço = preços[n]
-    if (n > 6) {
+    if (n > 5) {
         var id = 'qtd' + nome
         var quantidade = parseInt(document.getElementById(id).value)
     }
     else {
         var quantidade = 1
     }
+    sessionStorage.setItem("Nome", nome)
+    sessionStorage.setItem("Preço", preço)
+    sessionStorage.setItem("Quantidade", quantidade)
     Redirecionar('form.html')
+    Contar(nome)
+}
+function Info() {
+    var nome = sessionStorage.getItem("Nome")
+    var preço = sessionStorage.getItem("Preço")
+    var quantidade = sessionStorage.getItem("Quantidade")
+    var valor = preço * quantidade
     var produto = document.getElementById("nome_produto")
     var quantidade_produto = document.getElementById("quantidade_produto")
     var preço_produto = document.getElementById("preço_produto")
     produto.innerHTML = 'Produto: ' + nome
     quantidade_produto.innerHTML = 'Quantidade: ' + quantidade
-    preço_produto.innerHTML = 'Preço Total: ' + preço
-    Contar(nome)
+    preço_produto.innerHTML = 'Preço Total: ' + valor 
 }
 function Contar(nome) {
     var num = parseInt(localStorage.getItem(nome))
