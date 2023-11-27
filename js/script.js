@@ -1,3 +1,5 @@
+const preços = [13.99, 29.99, 19.99, 17.99, 25.99, 49.99, 2, 50]
+const nomes = ["Revolução dos Bichos", "Sherlock Holmes", "Isaac Newton", "Diário de um Banana", "Expresso do Oriente", "David Copperfield", "marcador", "caneta"]
 function local() {
     if (localStorage.getItem("hasCodeRunBefore") === null) {
         localStorage.setItem("Revolução dos Bichos", 0)
@@ -9,12 +11,40 @@ function local() {
         localStorage.setItem("hasCodeRunBefore", true);
     }
   }
-  function Redirecionar(name) {
-      document.location.href = name
+function Redirecionar(name) {
+    document.location.href = name
+}
+function Comprar(n) {
+    var nome = nomes[n]
+    var preço = preços[n]
+    if (n > 6) {
+        var id = 'qtd' + nome
+        var quantidade = parseInt(document.getElementById(id).value)
     }
-  function Comprar(name) {
+    else {
+        var quantidade = 1
+    }
     Redirecionar('form.html')
-    var num = parseInt(localStorage.getItem(name))
+    var produto = document.getElementById("nome_produto")
+    var quantidade_produto = document.getElementById("quantidade_produto")
+    var preço_produto = document.getElementById("preço_produto")
+    produto.innerHTML = 'Produto: ' + nome
+    quantidade_produto.innerHTML = 'Quantidade: ' + quantidade
+    preço_produto.innerHTML = 'Preço Total: ' + preço
+    Contar(nome)
+}
+function Contar(nome) {
+    var num = parseInt(localStorage.getItem(nome))
     var num = num + 1
-    localStorage.setItem(name, num)
-  }
+    localStorage.setItem(nome, num)
+
+}
+function MudarValor(n) {
+    var id = 'qtd' + nomes[n]
+    var id2 = 'btn' + nomes[n]
+    var qtd = parseInt(document.getElementById(id).value)
+    var preço = preços[n]
+    var valor = qtd * preço
+    var elemento = document.getElementById(id2)
+    elemento.innerHTML = '$' + valor
+}

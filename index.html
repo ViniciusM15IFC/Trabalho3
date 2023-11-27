@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>Livraria VM</h1>
+        <h1>Livraria</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
@@ -24,41 +24,62 @@
     <main>
         <section class="cards">
             <div class="card">
-                <img src="img/revolucao_bichos.jpg" alt="">
+                <img src="img/revolucao_bichos.jpg" alt="Capa do livro Revolução dos Bichos">
                 <h2>Revolução dos Bichos</h2>
                 <p>George Orwell</p>
-                <button onclick="Comprar('Revolução dos Bichos')">$13,99</button>
+                <button onclick="Comprar('0')">$13,99</button>
             </div>
             <div class="card">
                 <img src="img/sherlock.webp" alt="capa de Sherlock Holmes: O signo dos quatro">
                 <h2>Sherlock Holmes</h2>
                 <p>Arthur Conan Doyle</p>
-                <button onclick="Comprar('Sherlock Holmes')">$29,99</button>
+                <button onclick="Comprar('1')">$29,99</button>
             </div>
             <div class="card">
-                <img src="img/newton.jpg" alt="">
+                <img src="img/newton.jpg" alt="Capa do livro Issac Newton">
                 <h2>Isaac Newton e sua Maça</h2>
                 <p>Kjartan Poskitt</p>
-                <button onclick="Comprar('Isaac Newton')">$19,99</button>
+                <button onclick="Comprar('2')">$19,99</button>
             </div>
             <div class="card">
-                <img src="img/Dias-de-cao.jpg" alt="">
+                <img src="img/Dias-de-cao.jpg" alt="Capa ">
                 <h2>Diário de um Banana</h2>
                 <p>Jeff Kinney</p>
-                <button onclick="Comprar('Diário de um Banana')">$17,99</button>
+                <button onclick="Comprar('3')">$17,99</button>
             </div>
             <div class="card">
                 <img src="img/expresso_do_oriente.jpg" alt="">
                 <h2>Assasinato no Expresso do Oriente</h2>
                 <p>Agatha Christie</p>
-                <button onclick="Comprar('Expresso do Oriente')">$25,99</button>
+                <button onclick="Comprar('4')">$25,99</button>
             </div>
             <div class="card">
                 <img src="img/copperfield.webp" alt="">
                 <h2>David Copperfield</h2>
                 <p>Charles Dickens</p>
-                <button onclick="Comprar('David Copperfield')">$49,99</button>
+                <button onclick="Comprar('5')">$49,99</button>
             </div>
+            <div class="card">
+                <h2>Marcador de Página</h2>
+                <div class="quantidade" id="marcador">
+                    <button id="btnmarcador" onclick="Comprar('6')">$2</button>
+                    <input type="number" name="qtd" id="qtdmarcador" value="1" min="1" oninput="MudarValor('6')">
+                </div>
+            </div> 
+            <div class="card">
+                <h2>Caneta de Pena</h2>
+                <div class="quantidade" id="caneta">
+                    <button id="btncaneta">$50</button>
+                    <input type="number" name="qtd" id="qtdcaneta" min="1" value="1" oninput="MudarValor('7')">
+                </div>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <h2></h2>
+                <p></p>
+                <button></button>
+            </div> 
+
         </section>
     </main>
     <footer>

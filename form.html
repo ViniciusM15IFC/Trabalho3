@@ -2,18 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=he, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Formulário</title>
 </head>
-<body>
+<body onload="Info()">
     <header>
-
+        <h1>Livraria</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Livros</a></li>
+                <li><a href="#">Autores</a></li>
+                <li><a href="#">Contatos</a></li>
+                <li><a href="form.html">Cadrastro</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-
+        <form action="">
+            <div class="input-container">
+                <label for="">Nome</label>
+                <input type="text">
+            </div>
+            <div class="input-container">
+                <label for="">Email</label>
+                <input type="email">
+            </div>
+            <div class="input-container">
+                <label for="">Telefone</label>
+                <input type="number">                                  
+            </div>
+            <div class="input-container">
+                <label for="">CPF</label>
+                <input type="number">
+            </div>
+            <div class="input-container">
+                <label for="">CEP</label>
+                <input type="number">
+            </div>
+            <h6 id="nome_produto">Produto:</h6>
+            <h6 id="quantidade_produto">Quantidade:</h6>
+            <h6 id="preço_produto">Preço Total:</h6>
+        </form>
     </main>
     <footer>
-        
+        <p>&copy; 2023 Livraria | Criado por Vinicius, Lucas Trindade, Calebe</p>
     </footer>
 </body>
 </html>

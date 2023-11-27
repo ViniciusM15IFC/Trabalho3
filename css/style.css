@@ -46,7 +46,6 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     float: left;
-    height: 450px;
     font-family: Arial, sans-serif;
 }
 .card img {
@@ -113,9 +112,10 @@ form legend {
     font-weight: bold;
     font-size: 14px;
 }
-input[type="text"],
-input[type="date"],
-input[type="number"] {
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form input[type="email"] {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -163,4 +163,7 @@ button[type="reset"] {
 }
 button:hover {
     background-color: #0056b3;
+}
+.quantidade input{
+    width: 45px;
 }
