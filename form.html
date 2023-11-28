@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Formulário</title>
 </head>
 <body onload="Info()">
@@ -16,35 +17,49 @@
                 <li><a href="#">Livros</a></li>
                 <li><a href="#">Autores</a></li>
                 <li><a href="#">Contatos</a></li>
-                <li><a href="form.html">Cadrastro</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <form action="">
-            <div class="input-container">
-                <label for="">Nome</label>
-                <input type="text">
+        <form onsubmit="">
+            <fieldset>
+                <div class="input-container">
+                    <label for="">Nome</label>
+                    <input type="text" name="name"id="name" placeholder="Christopher Adam Bumstead " required >
+                </div>
+                <div class="input-container">
+                    <label for="">Email</label>
+                    <input type="email"name="email" id="email" placeholder="chrisbumstead@gmail.com" required onforminput="validarEmail()"> 
+                </div>
+                <div class="input-container">
+                    <label for="">Telefone</label>
+                    <input type="text" name="Telefone" id="Telefone" placeholder="+55 49 9135-9018" pattern="+\d{2} \d{2} \d{4}-\d{4}" required >                              
+                </div>
+                <div class="input-container">
+                    <label for="">CPF</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="117.943.389-99" pattern="\d{3}.\d{3}.\d{3}-\d{2}" required >
+                </div>
+                <div class="input-container">
+                    <label for="">CEP</label>
+                    <input type="text" name="cep" id="cep" placeholder="14795-000" pattern="\d{5}-?\d{3}" required > 
+                </div>
+                <div class="input-container">
+                    <label for="">Texto</label>
+                    <textarea name="" id="" cols="30" rows="10" readonly class="esconder"></textarea>
+                </div>
+            </fieldset>
+            <div class="final">
+                <div class="info">
+                    <h3>Voce está comprando:</h3>
+                    <h4 id="nome_produto">Produto:</h4>
+                    <h4 id="quantidade_produto">Quantidade:</h4>
+                    <h4 id="preço_produto">Preço Total:</h4>
+                </div>
+                <div class="botoes">
+                    <button type="submit">Concluir</button>
+                    <button type="reset">Limpar</button>
+                </div>
             </div>
-            <div class="input-container">
-                <label for="">Email</label>
-                <input type="email">
-            </div>
-            <div class="input-container">
-                <label for="">Telefone</label>
-                <input type="number">                                  
-            </div>
-            <div class="input-container">
-                <label for="">CPF</label>
-                <input type="number">
-            </div>
-            <div class="input-container">
-                <label for="">CEP</label>
-                <input type="number">
-            </div>
-            <h6 id="nome_produto">Produto:</h6>
-            <h6 id="quantidade_produto">Quantidade:</h6>
-            <h6 id="preço_produto">Preço Total:</h6>
         </form>
     </main>
     <footer>

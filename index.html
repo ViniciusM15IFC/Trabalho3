@@ -17,7 +17,6 @@
                 <li><a href="#">Livros</a></li>
                 <li><a href="#">Autores</a></li>
                 <li><a href="#">Contatos</a></li>
-                <li><a href="form.html">Cadrastro</a></li>
             </ul>
         </nav>
     </header>
@@ -42,7 +41,7 @@
                 <button onclick="Comprar('2')">$19,99</button>
             </div>
             <div class="card">
-                <img src="img/Dias-de-cao.jpg" alt="Capa ">
+                <img src="img/Dias-de-cao.jpg" alt="Capa">
                 <h2>Diário de um Banana</h2>
                 <p>Jeff Kinney</p>
                 <button onclick="Comprar('3')">$17,99</button>
@@ -54,12 +53,13 @@
                 <button onclick="Comprar('4')">$25,99</button>
             </div>
             <div class="card">
-                <img src="img/copperfield.webp" alt="">
+                <img src="img/copperfield.webp" alt="Capa do livro">
                 <h2>David Copperfield</h2>
                 <p>Charles Dickens</p>
                 <button onclick="Comprar('5')">$49,99</button>
             </div>
             <div class="card">
+                <img src="img/marcador.jpg" alt="">
                 <h2>Marcador de Página</h2>
                 <div class="quantidade" id="marcador">
                     <button id="btnmarcador" onclick="Comprar('6')">$2</button>
@@ -67,6 +67,7 @@
                 </div>
             </div> 
             <div class="card">
+                <img src="img/caneta.jpg" alt="">
                 <h2>Caneta de Pena</h2>
                 <div class="quantidade" id="caneta">
                     <button id="btncaneta" onclick="Comprar('7')">$50</button>
@@ -74,16 +75,17 @@
                 </div>
             </div>
             <div class="card">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-                <button></button>
+                <img src="img/organizador.webp" alt="Organizador de livros">
+                <h2>Organizador de Livros</h2>
+                <div class="quantidade" id="organizador">
+                    <button id="btnorganizador" onclick="Comprar('8')">$100</button>
+                    <input type="number" name="qtd" id="qtdorganizador" value="1" min="1" oninput="MudarValor('8')">
+                </div>
             </div> 
-
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Livraria | Criado por Vinicius, Lucas Trindade, Calebe</p>
+        <p>&copy; 2023 Livraria | Criado por Calebe, Lucas Trindade e Vinicius</p>
     </footer>
 </body>
 </html>

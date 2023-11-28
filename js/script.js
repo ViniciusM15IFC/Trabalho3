@@ -1,5 +1,5 @@
-const preços = [13.99, 29.99, 19.99, 17.99, 25.99, 49.99, 2, 50]
-const nomes = ["Revolução dos Bichos", "Sherlock Holmes", "Isaac Newton", "Diário de um Banana", "Expresso do Oriente", "David Copperfield", "marcador", "caneta"]
+const preços = [13.99, 29.99, 19.99, 17.99, 25.99, 49.99, 2, 50, 100]
+const nomes = ["Revolução dos Bichos", "Sherlock Holmes", "Isaac Newton", "Diário de um Banana", "Expresso do Oriente", "David Copperfield", "marcador", "caneta", "organizador"]
 function local() {
     if (localStorage.getItem("hasCodeRunBefore") === null) {
         localStorage.setItem("Revolução dos Bichos", 0)
@@ -46,7 +46,6 @@ function Contar(nome) {
     var num = parseInt(localStorage.getItem(nome))
     var num = num + 1
     localStorage.setItem(nome, num)
-
 }
 function MudarValor(n) {
     var id = 'qtd' + nomes[n]
@@ -56,4 +55,17 @@ function MudarValor(n) {
     var valor = qtd * preço
     var elemento = document.getElementById(id2)
     elemento.innerHTML = '$' + valor
+}
+
+function validarEmail() {
+    var email = document.getElementById("idEmail").value
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        alert("Email inválido")
+        return false
+    }else{
+        return true
+    }
+}
+function submitForm() {
+    
 }
