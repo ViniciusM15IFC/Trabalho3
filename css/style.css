@@ -29,8 +29,6 @@ nav li {
     display: inline;
     margin-right: 20px;
     padding: 3px;
-}
-nav a {
     text-decoration: none;
     font-weight: bold;
 }
@@ -169,12 +167,7 @@ button:hover {
 }
 .botoes {
     margin-top: 20px;
-  
-    
-     
-    
-    
 }
 .esconder {
-    display: block;
+    display: none;
 }

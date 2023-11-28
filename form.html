@@ -13,15 +13,14 @@
         <h1>Livraria</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="#">Livros</a></li>
-                <li><a href="#">Autores</a></li>
-                <li><a href="#">Contatos</a></li>
+                <li onclick="Redirecionar('index.html')">Início</li>
+                <li onclick="quantidadeVendas()">Quantidade de Vendas</li>
+                <li onclick="valorVendas()">Total das Vendas</li>
             </ul>
         </nav>
     </header>
     <main>
-        <form onsubmit="">
+        <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="POST" onsubmit="return validarEmail()">
             <fieldset>
                 <div class="input-container">
                     <label for="">Nome</label>
@@ -29,7 +28,7 @@
                 </div>
                 <div class="input-container">
                     <label for="">Email</label>
-                    <input type="email"name="email" id="email" placeholder="chrisbumstead@gmail.com" required onforminput="validarEmail()"> 
+                    <input type="email"name="email" id="email" placeholder="chrisbumstead@gmail.com" required onblur="validarEmail()"> 
                 </div>
                 <div class="input-container">
                     <label for="">Telefone</label>
@@ -43,9 +42,9 @@
                     <label for="">CEP</label>
                     <input type="text" name="cep" id="cep" placeholder="14795-000" pattern="\d{5}-?\d{3}" required > 
                 </div>
-                <div class="input-container">
+                <div class="input-container esconder">
                     <label for="">Texto</label>
-                    <textarea name="" id="" cols="30" rows="10" readonly class="esconder"></textarea>
+                    <textarea name="texto" id="texto" cols="30" rows="10" readonly required class="esconder"></textarea>
                 </div>
             </fieldset>
             <div class="final">
@@ -56,7 +55,7 @@
                     <h4 id="preço_produto">Preço Total:</h4>
                 </div>
                 <div class="botoes">
-                    <button type="submit">Concluir</button>
+                    <button onclick="submitForm()">Concluir</button>
                     <button type="reset">Limpar</button>
                 </div>
             </div>

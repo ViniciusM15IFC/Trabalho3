@@ -8,15 +8,14 @@
     <script src="js/script.js"></script>
     <title>Livraria</title>
 </head>
-<body>
+<body onload="local()">
     <header>
         <h1>Livraria</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="#">Livros</a></li>
-                <li><a href="#">Autores</a></li>
-                <li><a href="#">Contatos</a></li>
+                <li onclick="Redirecionar('index.html')">Início</li>
+                <li onclick="quantidadeVendas()">Quantidade de Vendas</li>
+                <li onclick="valorVendas()">Total das Vendas</li>
             </ul>
         </nav>
     </header>
@@ -26,7 +25,7 @@
                 <img src="img/revolucao_bichos.jpg" alt="Capa do livro Revolução dos Bichos">
                 <h2>Revolução dos Bichos</h2>
                 <p>George Orwell</p>
-                <button onclick="Comprar('0')">$13,99</button>
+                <button onclick="Comprar('0')">$15,99</button>
             </div>
             <div class="card">
                 <img src="img/sherlock.webp" alt="capa de Sherlock Holmes: O signo dos quatro">
@@ -44,7 +43,7 @@
                 <img src="img/Dias-de-cao.jpg" alt="Capa">
                 <h2>Diário de um Banana</h2>
                 <p>Jeff Kinney</p>
-                <button onclick="Comprar('3')">$17,99</button>
+                <button onclick="Comprar('3')">$29,99</button>
             </div>
             <div class="card">
                 <img src="img/expresso_do_oriente.jpg" alt="">
